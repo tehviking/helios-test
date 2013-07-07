@@ -2,14 +2,14 @@ require "bundler/capistrano"
 
 # deploy command: cap -S branch="<branchname>" deploy
 set :user, "deploy"
+set :password, ENV["DEPLOY_PASSWORD"] # The deploy user's password
 set :application, "wade-app"
 
-set :repository, "git@github.com:tehviking/friendfocus.git" # Your clone URL
+set :repository, "git@github.com:tehviking/helios-test.git" # Your clone URL
 set :scm, "git"
 set :branch, fetch(:branch, "master")
 set :scm_verbose, true
 set :deploy_via, :remote_cache
-set :scm_passphrase, ENV["DEPLOY_PASSWORD"] # The deploy user's password
 set :deploy_to, "/home/#{user}/#{application}"
 set :use_sudo, false
 
