@@ -1,9 +1,12 @@
+require "dotenv"
 require "bundler/capistrano"
+default_run_options[:shell] = '/bin/bash --login' 
+Dotenv.load
 
 # deploy command: cap -S branch="<branchname>" deploy
 set :user, "deploy"
 set :password, ENV["DEPLOY_PASSWORD"] # The deploy user's password
-set :application, "wade-app"
+set :application, "helios-test"
 
 set :repository, "git@github.com:tehviking/helios-test.git" # Your clone URL
 set :scm, "git"
