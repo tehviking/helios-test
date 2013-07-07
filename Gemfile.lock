@@ -83,6 +83,7 @@ GEM
     jsmin (1.0.1)
     json (1.8.0)
     kgio (2.8.0)
+    libv8 (3.11.8.17)
     mime-types (1.23)
     minitest (4.7.5)
     multi_json (1.7.7)
@@ -132,6 +133,7 @@ GEM
       rack (>= 1.0)
     rails-database-url (1.0.0)
     raindrops (0.11.0)
+    ref (1.0.5)
     ruby-hmac (0.4.0)
     sass (3.2.9)
     sequel (3.48.0)
@@ -159,6 +161,9 @@ GEM
     sinatra-support (1.2.2)
       sinatra (>= 1.0)
     terminal-table (1.4.5)
+    therubyracer (0.11.4)
+      libv8 (~> 3.11.8.12)
+      ref
     thor (0.18.1)
     thread_safe (0.1.0)
       atomic
@@ -180,6 +185,8 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano
+  dotenv
   helios
   pg
+  therubyracer
   unicorn
