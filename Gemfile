@@ -6,3 +6,5 @@ gem 'helios'
 
 gem 'unicorn'
 gem 'pg'
+
+gem 'capistrano'
